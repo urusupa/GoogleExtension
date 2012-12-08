@@ -1,4 +1,0 @@
-GoogleExtension
-===============
-
-GoogleExtensions
