@@ -1,0 +1,26 @@
+{
+	"name": "Temita Vanisher",
+	"description": "タイトルに てみた と名前がついているものを非表示にします",
+	"version": "0.1",
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"manifest_version": 2,
+	"permissions": [
+		"tabs",
+		"http://www.youtube.com/*",
+		"http://www.nicovideo.jp/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://www.youtube.com/results*",
+				"http://www.nicovideo.jp/ranking*",
+				"http://www.nicovideo.jp/search*"
+			],
+			"js": ["vanish.js"]
+		}
+	]
+}
