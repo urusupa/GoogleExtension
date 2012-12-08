@@ -1,7 +1,7 @@
 {
 	"name": "Temita Vanisher",
 	"description": "タイトルに てみた と名前がついているものを非表示にします",
-	"version": "0.1",
+	"version": "0.2",
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",
