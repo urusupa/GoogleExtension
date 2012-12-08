@@ -1,4 +1,4 @@
-TemitaVanisher
+#TemitaVanisher
 
-‚Ä‚İ‚½ ‚ğ”ñ•\¦‚É‚µ‚Ü‚·
+ã¦ã¿ãŸ ã‚’éè¡¨ç¤ºã«ã—ã¾ã™  
 icon32.png is default size
