@@ -1,19 +1,5 @@
 
 
-(function() {
-	var nowURL = document.URL;//urlでニコかyoutubeか判定します++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	if ( nowURL.indexOf("www.youtube.com/results") > 0) {//URLに"youtube.com"が含まれる場合
-		TubeVanish();
-	} else if ( nowURL.indexOf("www.nicovideo.jp/ranking") > 0) {//URLに"nicovideo.jp/ranking"が含まれる場合
-		NicoRankVanish();
-	} else if ( nowURL.indexOf("www.nicovideo.jp/search") > 0) {//URLに"nicovideo.jp/search"が含まれる場合
-		NicoSerchVanish();
-	} else {
-		//なにもしない
-	}
-	delete inText;//メモリ開放。効果は不明
-
-})();
 
 function TubeVanish() {//youtubeの検索一覧から てみた を削除します++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	//ヒットした動画を非表示
@@ -70,3 +56,18 @@ function NicoSerchVanish() {//ニコの検索結果から てみた を削除し
 	return 0;
 }
 
+
+(function() {
+	var nowURL = document.URL;//urlでニコかyoutubeか判定します++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	if ( nowURL.indexOf("youtube.com/results") > 0) {//URLに"youtube.com"が含まれる場合
+		TubeVanish();
+	} else if ( nowURL.indexOf("nicovideo.jp/ranking") >= 0) {//URLに"nicovideo.jp/ranking"が含まれる場合
+		NicoRankVanish();
+	} else if ( nowURL.indexOf("nicovideo.jp/search") >= 0) {//URLに"nicovideo.jp/search"が含まれる場合
+		NicoSerchVanish();
+	} else {
+		//なにもしない
+	}
+	delete inText;//メモリ開放。効果は不明
+
+})();
